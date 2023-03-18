@@ -9,13 +9,13 @@
 * -- BASE STYLES --
 * Most of these are inherited from Base, but I want to change a few.
 */
-body {
+body {background-image: url(../assets/images/revised.jpg);
   line-height: 1.7em;
   color: #7f8c8d;
   font-size: 13px;
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -23,12 +23,12 @@ h5,
 h6,
 label {
   color: #34495e;
-}
+} */
 
-.pure-img-responsive {
+ .pure-img-responsive {
   max-width: 100%;
   height: auto;
-}
+} 
 
 /*
 * -- LAYOUT STYLES --
@@ -60,10 +60,12 @@ label {
 }
 
 .pure-form input[type] {
-  border: 2px solid #ddd;
+  background-color: #ffeed3;
+  border: 2px solid #c9b9a0;
+  border-radius: 25px;
   box-shadow: none;
   font-size: 100%;
-  width: 100%;
+  width: 84%;
   margin-bottom: 1em;
 }
 
@@ -72,8 +74,8 @@ label {
 * I want my pure-button elements to look a little different
 */
 .pure-button {
-  background-color: #1f8dd6;
-  color: white;
+  background-color: #d61f1f;
+  color: rgb(223, 212, 175);
   padding: 0.5em 2em;
   border-radius: 5px;
 }
@@ -97,7 +99,7 @@ a.pure-button-primary {
   box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
 }
 .home-menu {
-  background: #2d3e50;
+  background: #ca0000;
 }
 .pure-menu.pure-menu-fixed {
   /* Fixed menus normally have a border at the bottom. */
@@ -133,7 +135,7 @@ a.pure-button-primary {
 */
 
 .splash-container {
-  background-image: url(../assets/images/illustration-movie-theme-23754792.jpg);
+  /*background-image: url(../assets/images/revised.jpg);*/
   z-index: 1;
   overflow: hidden;
   /* The following styles are required for the "scroll-over" effect */
@@ -157,10 +159,9 @@ a.pure-button-primary {
 
 /* This is the main heading that appears on the blue section */
 .splash-head {
-  font-size: 20px;
+  font-size: 40px;
   font-weight: bold;
-  color: white;
-  border: 3px solid white;
+  color: rgb(255, 0, 0);
   padding: 1em 1.6em;
   font-weight: 100;
   border-radius: 5px;
@@ -169,7 +170,7 @@ a.pure-button-primary {
 
 /* This is the subheading that appears on the blue section */
 .splash-subhead {
-  color: white;
+  color: rgb(195, 0, 0);
   letter-spacing: 0.05em;
   opacity: 0.8;
 }
@@ -185,7 +186,7 @@ a.pure-button-primary {
   width: 100%;
   min-height: 12%;
   z-index: 2;
-  background: white;
+  background: rgb(253, 251, 251);
 
 }
 
@@ -234,10 +235,12 @@ a.pure-button-primary {
 * On tablets and other medium-sized devices, we want to customize some
 * of the mobile styles.
 */
-@media (min-width: 48em) {
+@media (max-width: 480px) {
 
   /* We increase the body font size */
   body {
+    background-color: #111;
+    background-image: none;
       font-size: 16px;
   }
 
@@ -263,6 +266,7 @@ a.pure-button-primary {
   }
 
   .splash-head {
+    display: none;
       font-size: 250%;
   }
 
@@ -279,7 +283,7 @@ a.pure-button-primary {
 * On desktops and other large devices, we want to over-ride some
 * of the mobile and tablet styles.
 */
-@media (min-width: 78em) {
+@media (max-width: 1025px) {
   /* We increase the header font size even more */
   .splash-head {
       font-size: 300%;
