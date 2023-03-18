@@ -133,7 +133,7 @@ a.pure-button-primary {
 */
 
 .splash-container {
-  background: #1f8dd6;
+  background-image: url(../assets/images/illustration-movie-theme-23754792.jpg);
   z-index: 1;
   overflow: hidden;
   /* The following styles are required for the "scroll-over" effect */
