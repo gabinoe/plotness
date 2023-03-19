@@ -65,7 +65,7 @@ label {
   border-radius: 25px;
   box-shadow: none;
   font-size: 100%;
-  width: 84%;
+  width: 50%;
   margin-bottom: 1em;
 }
 
@@ -74,18 +74,19 @@ label {
 * I want my pure-button elements to look a little different
 */
 .pure-button {
+  position: inherit;
   background-color: #d61f1f;
   color: rgb(223, 212, 175);
   padding: 0.5em 2em;
   border-radius: 5px;
 }
 
-a.pure-button-primary {
+/* a.pure-button-primary {
   background: white;
   color: #1f8dd6;
   border-radius: 5px;
   font-size: 120%;
-}
+} */
 
 
 /*
@@ -135,6 +136,7 @@ a.pure-button-primary {
 */
 
 .splash-container {
+  position: relative;
   /*background-image: url(../assets/images/revised.jpg);*/
   z-index: 1;
   overflow: hidden;
@@ -239,7 +241,7 @@ a.pure-button-primary {
 
   /* We increase the body font size */
   body {
-    background-color: #111;
+    background-color: #676767;
     background-image: none;
       font-size: 16px;
   }
