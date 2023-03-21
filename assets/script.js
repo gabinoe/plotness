@@ -1,7 +1,7 @@
 requestUrl = 'http://www.omdbapi.com/?t=big&apikey=9b055176'
 // need to get the value for title then concat api + title + key inside the requestUrl
-var api = 'http://www.omdbapi.com/?t='
-var title = ''
+
+var title = 'movie';
 var key = '&apikey=9b055176'
 var titleEl = $('#our-form')
 //var titlebtnEl = $('#title-btn.pure-button')
@@ -13,15 +13,18 @@ function handleFormSubmit(event) {
 
   
 
-  var movie = $('input[name="title"]').val()
+  var movie = document.querySelector('#title').value
 
 
   if (!movie) {
     console.log('No Movie listed in form!');
     return;
   }
+  var queryString = 'http://www.omdbapi.com/?t=' + movie + key 
 
-  console.log( movie);
+  location.assign(queryString);
+
+  console.log(movie);
 }
 // const hashBrowser = val =>
 //   crypto.subtle
