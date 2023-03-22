@@ -1,5 +1,5 @@
-
-
+yturl = 'https://www.googleapis.com/youtube/v3/search?q='
+var youKey = '&key=AIzaSyB5faftGXgqJpv-C13VoHtm_UDWcPkovvs'
 //var title = 'movie';
 var key = '&apikey=9b055176'
 var titleEl = $('#our-form')
@@ -20,11 +20,19 @@ function handleFormSubmit(event) {
     return;
   }
   var queryString = 'http://www.omdbapi.com/?t=' + movie + key 
-
-  location.assign('./search-results.html?q=' + queryString);
+  var youTube = 'https://www.googleapis.com/youtube/v3/search?q=' + movie +"reviews" + youKey ;
+  //location.assign('./search-results.html?q=' + queryString);
   
-   fetch(queryString )
-   
+   fetch(queryString)
+   .then(function (response) {
+    return response.json();
+ })
+ .then(function (data) {
+    console.log(data);
+  });
+
+
+   fetch(youTube)
    .then(function (response) {
       return response.json();
    })
@@ -35,7 +43,7 @@ function handleFormSubmit(event) {
   console.log(movie);
 }
 
-
+//
 
 
   titleEl.on('submit', handleFormSubmit);
