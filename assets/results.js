@@ -45,4 +45,4 @@ function printResults(resultObj) {
     resultBody.append(titleEl, bodyContentEl, linkButtonEl);
   
     resultContentEl.append(resultCard);
-  }-
+  }
