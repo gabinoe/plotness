@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Youtube Video Search App</title>
+</head>
+ 
+<body>
+    <div class="container">
+        <h1 class="text-center mt-5">
+            Youtube Video Search Using Data API V3
+        </h1>
+        <form>
+            <div class="form-group">
+                <input type="text" class="form-control" name="" id="search">
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-danger" value="Search Videos">
+            </div>
+        </form>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="videos">
+ 
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!--the example uses bootstrap, need to convert it to foundation -DN-->
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ <!-- the example uses a different jQuery library than we do, this one appears to be a newer version (3.6.0 versus our 3.5.1) -DN-->
+    <!-- jQuery library -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</html>
+<!--the example does not have a script.js file, instead it just inserts the code into the .html using <script> tags. we would want to put this into our script.js file -DN-->
+<script>
+    $(document).ready(function(){
+        let apiKey = "AIzaSyB5faftGXgqJpv-C13VoHtm_UDWcPkovvs"
+     
+        $("form").submit((e) => {
+            e.preventDefault()
+            let search = $("#search").val()
+            videoSearch(apiKey,search,1)
+        })
+    })
+    
+    function videoSearch(apiKey,search,maxResults){
+        $.get("https://www.googleapis.com/youtube/v3/search?key=" + apiKey + "&type=video&part=snippet&maxResults=" + maxResults + "&q=" + search,(data) => {
+            console.log(data)
+     
+            let video = ''
+     
+            data.items.forEach(item => {
+                video = `
+                <iframe width="420" height="315" src="http://www.youtube.com/embed/${item.id.videoId}" frameborder="0" allowfullscreen></iframe>
+                `
+     
+                $("#videos").append(video)
+            });
+        })
+     
+    }
+    </script>
+
+    
