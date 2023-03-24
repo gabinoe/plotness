@@ -29,6 +29,7 @@ function handleFormSubmit(event) {
  })
  .then(function (data) {
     console.log(data);
+    document.getElementById('apiResponse').innerHTML = JSON.stringify(data);
   });
 
 
@@ -38,6 +39,7 @@ function handleFormSubmit(event) {
    })
    .then(function (data) {
       console.log(data);
+      
     });
 
   //console.log(movie); redundant

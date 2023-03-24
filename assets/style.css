@@ -87,7 +87,10 @@ label {
   border-radius: 5px;
   font-size: 120%;
 } */
-
+#apiResponse{
+  color:#ff0000;
+  background-color: #e9de9f;
+}
 
 /*
 * -- MENU STYLES --
