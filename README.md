@@ -14,7 +14,7 @@ This web application is built using the following technologies:
 - The Open Movie Database (OMDb) API for accessing movie data
 
 ## Installation
-To view the website, simply navigate to  https://gabinoe.github.io/plotness/ in your web browser. There is no need to install software or dependencies.
+To view the website, simply navigate to  https://gabinoe.github.io in your web browser. There is no need to install software or dependencies.
 You can clone this repository and install the necessary dependencies using the following commands:
 
 `git clone git@github.com:gabinoe/plotness.git`
