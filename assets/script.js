@@ -56,7 +56,7 @@ function handleFormSubmit(event) {
      
         $("form").submit((e) => {
             e.preventDefault()
-            let search = $("#title").val()
+            let search = $("#title").val() + "movie review"
             videoSearch(apiKey,search,1)
         })
     })
