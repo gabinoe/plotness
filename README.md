@@ -13,7 +13,7 @@ This web application is built using the following technologies:
 ## Installation
 To view the website, simply navigate to  https://gabinoe.github.io/plotness/ in your web browser. There is no need to install software or dependencies.
 You can clone this repository and install the necessary dependencies using the following commands:
->git clone https://github.com/gabinoe/
+>git clone git@github.com:gabinoe/plotness.git>
 ## Usage
 The website is designed to be easy to navigate and user-friendly.By using server-side API's, such as ODB and YouTube API's, the website can access a vast database of movie information and provide accurate and relevant results to users. Additionally, by presenting trailers alongside, users can quickly get an impression of whether a particular movie is worth watching.
 ## Contributing
