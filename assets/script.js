@@ -19,7 +19,7 @@ function handleFormSubmit(event) {
     console.log('Please enter a movie title.');
     return;
   }
-  var queryString = 'http://www.omdbapi.com/?t=' + movie + key 
+  var queryString = 'https://www.omdbapi.com/?t=' + movie + key 
   var youTube = 'https://www.googleapis.com/youtube/v3/search?q=' + movie +"trailer" + youKey ;
   //location.assign('./search-results.html?q=' + queryString);
   
